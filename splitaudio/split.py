@@ -1,12 +1,17 @@
+"""
+Author: Louis Winder
+
+Splits dataset of long audios into subset of shorter audios.
+Audio will be split into n sub-audios each of length splitDuration
+where n = floor(total samples / splitDuration).
+
+IMPORTANT: Files MUST be .wav format
+splitDuration: The number of individual SAMPLES per output (8 kHz = 8000 samples per second).
+"""
+
 import torchaudio
 import torch
 import os
-
-# Splits long audios into subsets of smaller audios
-# IMPORTANT: Files MUST be .wav format
-# splitDuration : the number of SAMPLES per output (8kHz = 8000 samples / second)
-# Audio will be split into n sub-audios each of length splitDuration
-# where n = floor(total samples / splitDuration)
 
 # Loads audio files into array from folder path
 def loadAudios(path):

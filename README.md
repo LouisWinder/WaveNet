@@ -4,7 +4,7 @@ This repository implements the WaveNet generation model for raw audio, introduce
 
 ## Training the model
 
-Training of the WaveNet model can be done through the class `train.py`.
+Training of the WaveNet model can be done through the script `train.py`.
 
 Steps for training:
 
@@ -43,7 +43,7 @@ Loss and learning rate plots will also be saved:
 
 4) Specify the desired learning rate and number of epochs for training inside `main.py`:
 
-
+![Diagram](Images/main.PNG)
 
 Once all the above steps have been completed, training can be initialised by running the Python script `main.py`.
 
@@ -51,5 +51,26 @@ Models will be saved to a .pth file with the name you specified. Loss and learni
 
 ## Generating with the model
 
-Lorem ipsum.
+Once models have been trained, we can use them to generate audio. This is done using the script `generate.py`.
 
+Steps for generating:
+
+1) Define the model you want to use for generation:
+
+![Diagram](Images/generate.PNG)
+
+2) Determine the generation parameters: generation type (unique or assisted/seeding) and length of generation:
+
+![Diagram](Images/generate2.PNG)
+
+Generated samples will be saved to a wav file once completed.
+
+3) Declare the desired generation sample rate in `postprocess.py`. This should be the same as the rate the data from the loaded model was trained on.
+
+![Diagram](Images/postprocess.PNG)
+
+Once all the above steps have been completed, generation can be initialised by running the Python script `generate.py`.
+
+The datasets used for our generation experiments is outlined in the [paper](PAPER_LINK). Please consult this for examples of datasets you may like to use.
+
+Happy generating!

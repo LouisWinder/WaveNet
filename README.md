@@ -21,7 +21,9 @@ Training/validation split can be provided, also with an optional seed to ensure 
 
 2) Configure the WaveNet model parameters inside `Wavenet.py`:
 
+![Diagram](Images/wavenet.PNG)
 
+The two most important parameters here are `layers` and `stacks` - together they determine the receptive field of the network. The higher the number of stacks and layers, the more memory is used when training the model, so proceeed with care when choosing these values. For recommended values please consult the [paper](PAPER_LINK). The other parameters, especially `classes`, should not be altered unless you really know what you are doing.
 
 3) Set appropriate parameters for training within `train.py`:
 

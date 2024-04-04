@@ -1,6 +1,6 @@
 # WaveNet
 
-This repository implements the WaveNet generation model for raw audio, introduced by van den Oord et al. in their [original paper](https://arxiv.org/abs/1609.03499). Its primary use here is to generate classical piano music.
+This repository implements the WaveNet generation model for raw audio, introduced by van den Oord et al. in their [original paper](https://arxiv.org/abs/1609.03499). Its primary use here is to generate classical piano music. For a detailed explanation of the underlying architecture as well as generation experiments, check out the [paper](PAPER_LINK).
 
 ## Training the model
 
@@ -71,6 +71,6 @@ Generated samples will be saved to a wav file once completed.
 
 Once all the above steps have been completed, generation can be initialised by running the Python script `generate.py`.
 
-The datasets used for our generation experiments is outlined in the [paper](PAPER_LINK). Please consult this for examples of datasets you may like to use.
+The datasets used for our generation experiments are outlined in the [paper](PAPER_LINK). Please consult this for examples of datasets you may like to use.
 
 Happy generating!

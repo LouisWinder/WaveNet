@@ -15,6 +15,10 @@ Steps for training:
 Note that this dataset folder MUST contain training examples that are all of the exact same length in digital samples. It is highly recommended to utilise the `splitaudio` program on your dataset if it does not yet satisfy this requirement.
 Training labels will be created automatically from the provided dataset.
 
+Training/validation split can be provided, also with an optional seed to ensure that the training/validation dataset split is the same every training cycle (useful for example if training in a staggered manner):
+
+![Diagram](Images/preprocess2.PNG)
+
 2) Configure the WaveNet model parameters inside `Wavenet.py`:
 
 
@@ -29,7 +33,7 @@ Training labels will be created automatically from the provided dataset.
 
 Once all the above steps have been completed, training can be initialised by running the Python script `main.py`.
 
-Models will be saved to a .pth with the name you specified. Loss and learning rate plots will also be saved for future reference.
+Models will be saved to a .pth file with the name you specified. Loss and learning rate plots will also be saved for future reference.
 
 ## Generating with the model
 
